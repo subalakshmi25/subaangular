@@ -2,12 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  template: `
-  <p>
-    routing is working!
-  </p>
-`,
-styles: []
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+
+
 })
 export class ChildComponent implements OnInit {
 
@@ -15,5 +13,6 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }
