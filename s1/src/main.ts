@@ -14,20 +14,16 @@ class AppComponent {
 
   ngOnInit() {
     const nums = of(1, 2, 3);
-
     const squareValues = map((val: number) => val + val);
     const squaredNums = squareValues(nums);
-
-squaredNums.subscribe(x => console.log(x))
-interval(500)
+    squaredNums.subscribe(x => console.log(x))
+    
+    interval(500)
       .pipe(
         take(20),
         map(s => Date.now())
       )
       .subscribe(value => console.log("the value of subscriber is " + value));
-
-    ;
-
     }
 }
 
