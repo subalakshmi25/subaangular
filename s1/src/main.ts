@@ -26,8 +26,6 @@ interval(500)
       )
       .subscribe(value => console.log("the value of subscriber is " + value));
 
-    ;
-
     }
 }
 
