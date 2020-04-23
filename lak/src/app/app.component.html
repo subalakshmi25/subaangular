@@ -1,0 +1,10 @@
+<p>
+  <button (click)="GetData()">get data</button>
+  <button (click)="ClearData()">clear</button>
+</p>
+
+<pre>{{ users | json }}</pre> 
+<pre style="height: 150px; overflow: scroll">{{ myData | json }}</pre>
+
+<button (click)="postData()">post data</button>
+{{ total }} - {{ counter }}
