@@ -1,0 +1,60 @@
+.base {
+    background: rgb(252, 244, 237);
+    margin-top: 5vh;
+    border: 3px solid black;
+    width: 50%;
+}
+
+.maindisplay {
+    background: lightgrey;
+    height: 25vh;
+    padding: 5;
+    font-size: 4rem;
+    text-align: right;
+    font-family: Courier, monospace;
+}
+
+.subdisplay {
+    border-bottom: 1px solid black;
+    height: 50%;
+    font-size: 2rem;
+}
+
+.keypad {
+    height: calc(50% / 3);
+}
+
+.keys {
+    margin: 0;
+    height: 20%;
+    background: whitesmoke;
+    color: black;
+    padding: 2%;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.keys:hover {
+    opacity: 1;
+}
+
+.ackey {
+    color: rgb(17, 67, 231);
+    background: rgb(245, 243, 243);
+}
+
+.equalkey {
+    color: rgb(16, 97, 248);
+    background-color: rgb(250, 245, 245); 
+}
+
+.numkey {
+    color: rgb(16, 119, 253);
+    background-color: rgb(250, 249, 249); 
+}
+
+.opkey {
+    color: rgb(43, 57, 253);
+    background-color: rgb(246, 250, 245); 
+}
