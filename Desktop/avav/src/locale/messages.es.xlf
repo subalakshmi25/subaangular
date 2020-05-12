@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="appTitle" datatype="html">
+        <source>
+          Angular Internationalization
+        </source>
+        <target>
+          Angular Iternacionalización 
+        </target>
+        <context-group >
+          <context context-type="sourcefile">app/app.component.ts</context>
+        </context-group>
+        </trans-unit>
+        
+          <context context-type="sourcefile">app/app.component.ts</context>
+      
+      </trans-unit>
+    </body>
+  </file>
