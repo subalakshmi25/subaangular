@@ -1,0 +1,13 @@
+<h1> users list </h1>
+<div *ngIf="users">
+  <div *ngFor="let user of users">
+   <div [ngSwitch]="user.gender">
+     <div class="female" *ngSwitchCase="'female'">
+       {{user.name}}
+     </div>
+    <div class="male" *ngSwitchCase="'male'">
+       {{user.name}}
+    </div>
+   </div>
+  </div>
+</div>
