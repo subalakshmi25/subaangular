@@ -1,0 +1,29 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <label class="label">Name</label>
+    <input class="input"
+           type="text"
+           placeholder="Enter your name"
+           formControlName="name">
+    <p *ngIf="name.invalid ">Name is required.</p>
+  
+    <label class="label">Email</label>
+    <input class="input"
+           type="text"
+           placeholder="Your email address"
+           formControlName="email">
+    <div *ngIf="email.invalid ">
+      <p *ngIf="email.errors.email">Valid email is required.</p>
+    </div>
+  
+    <label class="label">Password</label>
+    <input class="input"
+           type="password"
+           placeholder="password must be 6 characters"
+           formControlName="password">
+    <div *ngIf="password.invalid ">
+      <p *ngIf="password.errors.minlength">Password should be at least 6 characters.</p>
+    </div>
+  
+    <button type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+  </form>
+ 
