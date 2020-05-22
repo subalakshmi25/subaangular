@@ -1,0 +1,32 @@
+
+<div class="center">
+
+  <label class="label">TODO TASK LIST</label><br><br>
+  <input type="text" name="" placeholder="Enter your task" class="task" #task>  
+   &nbsp;&nbsp;
+
+  <button class="btn-add-task" type="button"(click)="add(task.value)">Add</button><br>
+  &nbsp;&nbsp;
+
+
+  <div class="edit-popup" *ngIf="show">
+
+    <input type="text" name=""  class="edit-task" value="{{task.value}}" #task>
+    &nbsp;&nbsp;
+
+    <button class="btn-update" type="button" (click)="update(task.value)">Update</button>
+    &nbsp;&nbsp;
+
+
+  </div>
+
+
+    <li *ngFor="let task of taskData">
+      <span [ngClass]="{'done': task.done}">{{task.todo}}</span>
+      &nbsp;
+
+      <button (click)="edit(task.taskid, task.todo)" type="button">Edit</button>      
+      &nbsp;
+      <button (click)="delete(task.taskid)" type="button">Delete</button>
+    </li>
+  </div>
