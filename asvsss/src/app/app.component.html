@@ -1,0 +1,28 @@
+  <div class="form-group">
+    <label class="control-label" for="college">college:</label>&nbsp;
+    <select *ngIf="getcolleges()" [(ngModel)]="selectedcollege" (change)="onSelectcollege($event.target.value)" class="form-control" id="college">
+       <option value="0">Select college</option>
+      <option *ngFor="let college of getcolleges()" value= {{college.id}}>{{college.name}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="courses">courses:</label>&nbsp;
+    <select *ngIf="courses" [(ngModel)]="selectedcourse" (change)="onSelectcourse($event.target.value)" class="form-control" id="course">
+        <option value="0">Select course</option>
+      <option *ngFor="let course of courses" value= {{course.id}}>{{course.name}}</option>
+    </select>
+
+  <div class="form-group">
+    <label class="control-label" for="subject">subject:</label>&nbsp;
+    <select class="form-control" [(ngModel)]="selectedLevel" id="subject">
+        <option *ngIf="!selectedcourse" value="0">Select subject</option>
+        <option *ngFor="let subject of subjects" value= {{subject.name}}>{{subject.name}}</option>
+    </select>&nbsp;
+    {{selectedLevel | json}}
+  <div class="form-group" *ngIf="selectedLevel">
+      <label for="name">Feedback about your subject:</label>
+      <input type="text" class="form-control" id="subject"   required>
+    </div>
+  </div>
+</div>
