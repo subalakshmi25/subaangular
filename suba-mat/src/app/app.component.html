@@ -1,0 +1,15 @@
+<mat-form-field >
+  <mat-select   #collegeVaraible name="collegeVaraible" [(value)]="selectedcollege" (selectionChange)="departmentchange(selectedcollege)"  id="dept" placeholder="college">
+    <mat-option *ngFor="let college of colleges" [value]="college.name">
+      {{college.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+ <div  *ngIf="selectedcollege">
+     <mat-form-field>
+      <input matInput placeholder="Enter Your Name"
+      [(ngModel)]="text">
+    </mat-form-field>
+    <button mat-button (click)=onClick()>Submit</button>
+  </div>
+  
